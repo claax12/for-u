@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="video"> 
+        <a href="index.html#home" type="button" class="cta">Home    !</a>
+        <h1>Enjoy Watching!</h1>
+        <div class="row">
+            <div class="col">
+                <div class="future-img">
+                    <img src="me/heart.jpg" width="100%">
+                    <img src="media/play.png" class="play-btn" 
+                    onclick="playVideo('me/355381327_6334839486610924_3833750177782281223_n.mp4')">
+                </div>
+                <p>Falling in love with you was the easiest thing I’ve done in my life.</p>
+            </div>
+            <div class="col">
+                <div class="small-img-row">
+                    <div class="small-img">
+                        <img src="me/heart.jpg">
+                        <img src="media/play.png" class="play-btn"
+                        onclick="playVideo('me/355387193_6230287097078361_3440180191676440481_n.mp4')">
+                    </div>
+                    <p>ito yung video na sinend mo saakin na sobrang kinilig ako ng sobra at lage ko pinapanood ito kada tuwing namimiss kita </p>
+                </div>
+
+
+    <div class="video-player" id="videoPlayer">
+        <video width="100%" controls autoplay id="myVideo">
+            <source src="" type="video/mp4">
+        </video>
+        <img src="media/close.png" class="close-btn" 
+        onclick="stopVideo()">
+    </div>
+
+
+<script>
+    var videoPlayer = document.getElementById("videoPlayer");
+    var myVideo = document.getElementById("myVideo");
+
+    function stopVideo(){
+
+        videoPlayer.style.display = "none"
+
+    }
+
+    function playVideo(file){
+
+        myVideo.src = file;
+        videoPlayer.style.display = "block"
+
+    }
+
+</script>
+
+
+</body>
+</html>
